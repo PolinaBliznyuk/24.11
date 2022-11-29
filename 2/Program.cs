@@ -1,2 +1,21 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая принимает на 
+// вход число и выдаёт сумму цифр в числе.
+
+Console.WriteLine ("Укажите число ");
+
+int num = Convert.ToInt32(Console.ReadLine());
+
+
+Console.WriteLine ("Сумма " + GetSumNum(num));
+
+int GetSumNum(int input)
+
+{
+    int sum=0;
+    while(input>0)
+    {
+        sum += input %10;
+        input = input /10;
+    }
+    return sum;
+}
